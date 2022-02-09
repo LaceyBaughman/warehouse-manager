@@ -1,0 +1,28 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: 60vh;
+}
+
+.drk-bg {
+  min-height: 10vh;
+  background-color: #330000;
+  color: #ffbe00;
+  font-size: x-large;
+}
+
+.btn-color {
+  background-color: #ffbe00;
+  color: #330000;
+
+}
+
+.search-again {
+  border-color: #ffbe00;
+  outline-color: #ffbe00;
+  color: #ffbe00;
+}
