@@ -1,11 +1,12 @@
 
-let packages = [{ heavy: true, priority: false, fragile: false, image: '/assets/images/Package.png', lost: false, name: 'Zach', Brand: 'Amazon' },
-{ heavy: false, priority: true, fragile: true, image: '/assets/images/Package.png', name: 'Jonesy', lost: false, Brand: 'Costco' },
-{ heavy: true, priority: false, fragile: true, image: '/assets/images/Package.png', name: 'Jake', lost: false, Brand: 'Costco' },
-{ heavy: false, priority: false, fragile: false, image: '/assets/images/Package.png', name: 'Mark', lost: false, Brand: 'Wayfair' },
-{ heavy: true, priority: true, fragile: true, image: '/assets/images/Package.png', name: 'Brittany', lost: false, Brand: 'Wayfair' },
-{ heavy: false, priority: true, fragile: false, image: '/assets/images/Package.png', name: 'Mick', lost: false, Brand: 'Amazon' },
-{ heavy: true, priority: false, fragile: true, image: '/assets/images/Package.png', name: 'Jeremy', lost: false, Brand: 'Ikea' }]
+let packages = [
+  { heavy: false, priority: true, fragile: false, image: '/assets/images/Package.png', name: 'Zach', lost: false, Brand: 'Amazon' },
+  { heavy: true, priority: false, fragile: true, image: '/assets/images/Package.png', name: 'Jonesy', lost: false, Brand: 'Costco' },
+  { heavy: true, priority: true, fragile: false, image: '/assets/images/Package.png', name: 'Jake', lost: false, Brand: 'Costco' },
+  { heavy: false, priority: false, fragile: false, image: '/assets/images/Package.png', name: 'Mark', lost: false, Brand: 'Wayfair' },
+  { heavy: false, priority: false, fragile: true, image: '/assets/images/Package.png', name: 'Brittany', lost: false, Brand: 'Wayfair' },
+  { heavy: true, priority: false, fragile: false, image: '/assets/images/Package.png', name: 'Mick', lost: false, Brand: 'Amazon' },
+  { heavy: false, priority: true, fragile: true, image: '/assets/images/Package.png', name: 'Jeremy', lost: false, Brand: 'Ikea' }]
 
 
 let search = []
@@ -26,11 +27,11 @@ function draw() {
       </div>
       `
   }
-  document.getElementById('cards').innerHTML = template
+  document.getElementById('Box').innerHTML = template
 }
 
 
-function newGame() {
+function searchAgain() {
   packages.forEach(package => package.lost = false)
 
   const randIndex = Math.floor(Math.random() * packages.length)
@@ -60,5 +61,4 @@ function guess(name) {
 }
 
 
-newGame()
-
+searchAgain()
